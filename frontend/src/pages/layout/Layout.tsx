@@ -95,13 +95,6 @@ const Layout = () => {
         </Stack>
       </header>
       
-      {/* NEW LINK ADDED HERE - eTD  */}
-      <div style={{ marginTop: "20px", textAlign: "center" }}>
-              <a href="https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=6ner6qW040mh6NbdI6HyhlQieLAsTXtGq_A1CtAdNdVUNzFJTEtHU1dDM0ZTN0dPMVdYSzFPWFNXSy4u&Token=1b844bebfe9e42079d56ff542e042d4c" target="_blank" rel="noopener noreferrer">
-                Assessment Chatbot – Feedback & Support Form
-              </a>
-      </div>
-
       <Outlet />
       <Dialog
         onDismiss={handleSharePanelDismiss}

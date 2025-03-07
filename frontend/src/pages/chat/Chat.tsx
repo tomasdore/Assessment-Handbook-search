@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRef, useState, useEffect, useContext, useLayoutEffect } from 'react'
 import { CommandBarButton, IconButton, Dialog, DialogType, Stack } from '@fluentui/react'
-import { SquareRegular, ShieldLockRegular, ErrorCircleRegular } from '@fluentui/react-icons'
+import { SquareRegular, ShieldLockRegular, ErrorCircleRegular, PersonFeedbackRegular } from '@fluentui/react-icons'
 
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -74,6 +74,14 @@ const Chat = () => {
     subText: errorMsg?.subtitle
   }
 
+  const handleClick = () => {
+    window.open(
+      "https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=6ner6qW040mh6NbdI6HyhlQieLAsTXtGq_A1CtAdNdVUNzFJTEtHU1dDM0ZTN0dPMVdYSzFPWFNXSy4u&Token=1b844bebfe9e42079d56ff542e042d4c",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+  
   const modalProps = {
     titleAriaId: 'labelId',
     subtitleAriaId: 'subTextId',
@@ -798,6 +806,7 @@ const Chat = () => {
               <Stack className={styles.chatEmptyState}>
                 <img src={logo} className={styles.chatIcon} aria-hidden="true" />
                 <h1 className={styles.chatEmptyStateTitle}>{ui?.chat_title}</h1>
+                <h2>#AskAva</h2>
                 <h2 className={styles.chatEmptyStateSubtitle}>{ui?.chat_description}</h2>
               </Stack>
             ) : (
@@ -855,11 +864,14 @@ const Chat = () => {
               </div>
             )}
 
-            <div style={{ marginTop: "20px", textAlign: "center" }}>
-              <a href="https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=6ner6qW040mh6NbdI6HyhlQieLAsTXtGq_A1CtAdNdVUNzFJTEtHU1dDM0ZTN0dPMVdYSzFPWFNXSy4u&Token=1b844bebfe9e42079d56ff542e042d4c" target="_blank" rel="noopener noreferrer">
-                Assessment Chatbot – Feedback & Support Form
-              </a>
-            </div>
+            <Stack horizontalAlign="center" styles={{ root: { marginTop: "20px" } }}>
+              <IconButton
+                iconProps={{ iconName: "PersonFeedbackRegular" }} // Choose a relevant icon
+                title="Feedback & Support"
+                ariaLabel="Feedback & Support"
+                onClick={handleClick}
+              />
+            </Stack>
 
             <Stack horizontal className={styles.chatInput}>
               {isLoading && messages.length > 0 && (
