@@ -862,7 +862,8 @@ const Chat = () => {
 
             <Stack horizontalAlign="center" styles={{ root: { marginTop: "20px" } }}>
               <IconButton
-                iconProps={{ iconName: "PersonFeedbackRegular" }} // Choose a relevant icon
+                iconProps={{ iconName: "Feedback" }} // Choose a relevant icon
+                text="Feedback & Support"
                 title="Feedback & Support"
                 ariaLabel="Feedback & Support"
                 onClick={handleClick}
