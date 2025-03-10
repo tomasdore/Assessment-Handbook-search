@@ -768,10 +768,6 @@ const Chat = () => {
 
   return (
     <div className={styles.container} role="main">
-      <div style={{ background: "red", padding: "10px", color: "white", textAlign: "center" }}>
-        DEBUG: Chat.tsx is rendering!
-      </div>
-
       {showAuthMessage ? (
         <Stack className={styles.chatEmptyState}>
           <ShieldLockRegular
