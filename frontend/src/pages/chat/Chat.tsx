@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef, useState, useEffect, useContext, useLayoutEffect } from 'react'
-import { CommandBarButton, IconButton, Dialog, DialogType, Stack } from '@fluentui/react'
+import { CommandBarButton, IconButton, Dialog, DialogType, Stack, PrimaryButton } from '@fluentui/react'
 import { SquareRegular, ShieldLockRegular, ErrorCircleRegular, PersonFeedbackRegular } from '@fluentui/react-icons'
 
 import ReactMarkdown from 'react-markdown'
@@ -861,13 +861,13 @@ const Chat = () => {
             )}
 
             <Stack horizontalAlign="center" styles={{ root: { marginTop: "20px" } }}>
-              <IconButton
-                iconProps={{ iconName: "Feedback" }} // Choose a relevant icon
-                text="Feedback & Support"
-                title="Feedback & Support"
-                ariaLabel="Feedback & Support"
-                onClick={handleClick}
-              />
+            <PrimaryButton
+              iconProps={{ iconName: 'Feedback' }}
+              text="Give feedback"
+              title="Give feedback"
+              ariaLabel="Give feedback"
+              onClick={handleClick}
+            />
             </Stack>
 
             <Stack horizontal className={styles.chatInput}>
