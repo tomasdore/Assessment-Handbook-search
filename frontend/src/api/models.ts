@@ -127,6 +127,8 @@ export type UI = {
   title: string
   chat_title: string
   chat_description: string
+  chat_subtitle?: string  // Added this line with "?" to make it optional
+  chat_hashtag?: string   // Added this line with "?" to make it optional
   logo?: string
   chat_logo?: string
   show_share_button?: boolean
