@@ -74,13 +74,13 @@ const Chat = () => {
     subText: errorMsg?.subtitle
   }
 
-  const handleClick = () => {
-    window.open(
-      "https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=6ner6qW040mh6NbdI6HyhlQieLAsTXtGq_A1CtAdNdVUNzFJTEtHU1dDM0ZTN0dPMVdYSzFPWFNXSy4u&Token=1b844bebfe9e42079d56ff542e042d4c",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  };
+const handleClick = () => {
+  window.open(
+    "https://forms.office.com/Pages/ResponsePage.aspx?id=6ner6qW040mh6NbdI6HyhlQieLAsTXtGq_A1CtAdNdVUNzFJTEtHU1dDM0ZTN0dPMVdYSzFPWFNXSy4u",
+    "_blank",
+    "noopener,noreferrer"
+  );
+};
   
   const modalProps = {
     titleAriaId: 'labelId',
